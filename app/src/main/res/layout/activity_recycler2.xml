@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="false"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/round_searchview"
+        app:queryHint="Search Notes"
+        app:iconifiedByDefault="false" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/imageView2"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/eq"
+        android:layout_toRightOf="@id/searchView_home"/>
+
+    <include
+        android:id="@+id/cardViewLayout"
+        layout="@layout/card2"
+        android:layout_below="@id/searchView_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="12dp"
+        app:menu_colorNormal="#0E2E43"
+        app:menu_colorPressed="#0E2E43"
+        android:src="@drawable/ic_add">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_item1"
+            android:layout_width="wrap_content"
+            android:src="@drawable/hearts"
+            app:fab_colorNormal="@color/white"
+            app:menu_colorPressed="@color/white"
+            fab:fab_label="Dating"
+            android:layout_height="wrap_content" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_item2"
+            android:layout_width="wrap_content"
+            android:src="@drawable/eng"
+            app:fab_colorNormal="@color/white"
+            app:menu_colorPressed="@color/white"
+            fab:fab_label="Matrimony"
+            android:layout_height="wrap_content"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_item3"
+            android:layout_width="wrap_content"
+            android:src="@drawable/shop"
+            app:fab_colorNormal="@color/white"
+            app:menu_colorPressed="@color/white"
+            fab:fab_label="Buy-Sell-Rent"
+            android:layout_height="wrap_content" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_item4"
+            android:layout_width="wrap_content"
+            android:src="@drawable/bus1"
+            app:fab_colorNormal="@color/white"
+            app:menu_colorPressed="@color/white"
+            fab:fab_label="Business Cards"
+            android:layout_height="wrap_content"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_item5"
+            android:layout_width="wrap_content"
+            android:src="@drawable/has"
+            app:fab_colorNormal="@color/white"
+            app:menu_colorPressed="@color/white"
+            fab:fab_label="Netclan Groups"
+            android:layout_height="wrap_content" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_item6"
+            android:layout_width="wrap_content"
+            android:src="@drawable/bag"
+            app:fab_colorNormal="@color/white"
+            app:menu_colorPressed="@color/white"
+            fab:fab_label="Jobs"
+            android:layout_height="wrap_content"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_item7"
+            android:layout_width="wrap_content"
+            fab:fab_label="Notes"
+            android:src="@drawable/note"
+            app:fab_colorNormal="@color/white"
+            app:menu_colorPressed="@color/white"
+            android:layout_height="wrap_content" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</RelativeLayout>

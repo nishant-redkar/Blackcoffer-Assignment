@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.BlackcofferAssignment" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor" tools:targetApi="l">#0E2E43</item>
+    </style>
+
+    <style name="NoRippleStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="rippleColor">@android:color/transparent</item>
+    </style>
+
+    <style name="SmallIconMenuItem" parent="@style/Widget.AppCompat.Light.ActionButton">
+        <item name="android:textSize">12sp</item> <!-- Adjust the text size as per your preference -->
+        <item name="android:icon">@drawable/todo</item>
+    </style>
+
+
+    <style name="Theme.BlackcofferAssignment" parent="Base.Theme.BlackcofferAssignment" />
+</resources>
