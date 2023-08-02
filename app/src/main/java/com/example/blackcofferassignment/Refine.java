@@ -2,12 +2,17 @@ package com.example.blackcofferassignment;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.ViewCompat;
 
+import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.android.material.slider.Slider;
@@ -21,6 +26,15 @@ public class Refine extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_refine);
 
+        Spinner spinner = findViewById(R.id.spinnerAvailability);
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(
+                this,
+                R.array.availability_items,
+                R.layout.spinner_item_layout);
+
+        adapter.setDropDownViewResource(R.layout.spinner_item_layout);
+        spinner.setAdapter(adapter);
+
         seekBarRange = findViewById(R.id.seekBarRange);
         Button btnSave = findViewById(R.id.save);
         Button button1 = findViewById(R.id.button1);
@@ -31,6 +45,10 @@ public class Refine extends AppCompatActivity {
         Button button6 = findViewById(R.id.button6);
         Button button7 = findViewById(R.id.button7);
         Button button8 = findViewById(R.id.button8);
+
+
+
+
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,6 +118,9 @@ public class Refine extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         toolbar.setTitle("Refine");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setTitleTextColor(getResources().getColor(R.color.white));
+
+
     }
 
     @Override
@@ -112,13 +133,20 @@ public class Refine extends AppCompatActivity {
     }
 
     private void toggleCategoryButtonColor(Button button) {
+        int[] stateSet = {android.R.attr.state_checked};
+        ColorStateList colorStateList =
+                ContextCompat.getColorStateList(this, R.color.button_selected_color);
+
         if (button.isSelected()) {
             button.setSelected(false);
-            button.setBackgroundColor(Color.TRANSPARENT);
+            button.setTextColor(getResources().getColor(R.color.button_selected_color));
+            ViewCompat.setBackgroundTintList(button, colorStateList);
         } else {
             button.setSelected(true);
-            button.setBackgroundColor(getResources().getColor(R.color.button_selected_color));
+            button.setTextColor(Color.WHITE);
+            ViewCompat.setBackgroundTintList(button, colorStateList);
         }
     }
+
 
 }

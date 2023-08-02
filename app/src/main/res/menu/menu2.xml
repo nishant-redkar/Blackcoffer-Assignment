@@ -3,6 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/menu_item_id"
-        app:showAsAction="always|withText"
+        app:showAsAction="always"
         android:title="Refine"/>
 </menu>

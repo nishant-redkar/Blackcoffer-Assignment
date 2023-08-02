@@ -14,6 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/toolbar"/>
+
     </com.google.android.material.appbar.AppBarLayout>
 
 
@@ -26,6 +27,10 @@
         android:layout_height="wrap_content"
         android:background="#143D59"
         app:tabGravity="fill"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="#C0C0C0"
+        app:tabIndicatorColor="@color/white"
+        app:tabRippleColor="@android:color/transparent"
         app:tabMode="fixed">
 
         <com.google.android.material.tabs.TabItem
